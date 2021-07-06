@@ -13,7 +13,7 @@ function App() {
       <Router>
         <AuthProvider>
           <Switch>
-            <Route path="/chats" component={Chats}
+            <Route path="/chats" component={Chats} />
             <Route path="/" component={Login} /> 
           </Switch>
         </AuthProvider>
