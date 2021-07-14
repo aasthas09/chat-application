@@ -5,4 +5,4 @@ This is a messaging application built using React.js. This chat application give
 
 
 Setup:
-- run ```npm start``` on both client and server side to start the app.
+- run ```npm start``` on client side to start the app.
