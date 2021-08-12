@@ -37,7 +37,7 @@ export default function Chats() {
       axios.get(
         'https://api.chatengine.io/users/me/',
         { headers: { 
-          "project-id": '64704114-5665-484f-ab04-8c7a5f7eb44f',
+          "project-id": process.env.REACT_APP_CHAT_ENGINE_ID,
           "user-name": user.email,
           "user-secret": user.uid
         }}
@@ -58,7 +58,7 @@ export default function Chats() {
                 axios.post(
                     'https://api.chatengine.io/users/',
                     formdata,
-                    { headers: { "private-key": "5b5cbd1e-08f4-4b0c-9532-76a028459aa7"}}
+                    { headers: { "private-key": process.env.REACT_APP_CHAT_ENGINE_KEY }}
                 )
                 .then(() => setLoading(false))
                 .catch(e => console.log('e', e.response))
@@ -81,7 +81,7 @@ export default function Chats() {
 
         <ChatEngine 
             height='calc(100vh - 66px)'
-            projectID='64704114-5665-484f-ab04-8c7a5f7eb44f'
+            projectID = {process.env.REACT_APP_CHAT_ENGINE_ID}
             userName= {user.email}
             userSecret= {user.uid}
         />
